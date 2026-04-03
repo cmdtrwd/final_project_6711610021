@@ -1,0 +1,61 @@
+$primary:       #1A0F07;
+$secondary:     #2E1B0E;
+$accent:        #C9913D;
+$accent-light:  #E8B96A;
+$accent-dark:   #9B6B27;
+$cream:         #F7F1E8;
+$warm-white:    #FDFAF5; 
+$muted:         #8C7B6B;
+$white:         #FFFFFF;
+
+$font-heading:  'Cormorant Garamond', Georgia, serif;
+$font-display:  'Cormorant Garamond', serif;
+$font-body:     'DM Sans', 'Helvetica Neue', sans-serif;
+
+$space-base:    8px;
+$space-xs:      $space-base * 1;
+$space-sm:      $space-base * 2;
+$space-md:      $space-base * 3;
+$space-lg:      $space-base * 5; 
+$space-xl:      $space-base * 8; 
+$space-2xl:     $space-base * 12; 
+$space-3xl:     $space-base * 16;
+
+$mobile:        480px;
+$tablet:        768px;
+$desktop:       1024px;
+$wide:          1280px;
+
+$shadow-sm:     0 2px 8px rgba(26, 15, 7, 0.08);
+$shadow-md:     0 8px 24px rgba(26, 15, 7, 0.12);
+$shadow-lg:     0 20px 60px rgba(26, 15, 7, 0.18);
+$shadow-gold:   0 8px 32px rgba(201, 145, 61, 0.25);
+
+$radius-sm:     4px;
+$radius-md:     12px;
+$radius-lg:     24px;
+$radius-full:   9999px;
+
+$transition-fast:   all 0.2s ease;
+$transition-base:   all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$transition-slow:   all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+$z-base:    1;
+$z-nav:     100;
+$z-overlay: 200;
+$z-modal:   300;
+
+$theme-colors: (
+  "accent":       $accent,
+  "accent-light": $accent-light,
+  "accent-dark":  $accent-dark,
+  "muted":        $muted,
+  "primary":      $primary,
+);
+
+$badge-variants: (
+  "bestseller": $accent,
+  "new":        #5a9a6e,
+  "popular":    #7a6ab5,
+  "chefs-pick": $accent-dark,
+);

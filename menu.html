@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Lumina Cafe</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="index.html" class="logo">LU<span>M</span>INA</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <button class="mobile-menu" id="menuToggle" aria-label="Toggle menu">☰</button>
+  </nav>
+
+  <header class="hero hero--sub">
+    <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1445116572658-220740702852?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero-tag">Crafted with Love</p>
+      <h1>Our Menu</h1>
+    </div>
+  </header>
+
+  <section class="section section--warm-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Curated Selection</span>
+        <h2>Signature Drinks</h2>
+        <p>Every cup is crafted with intention, using coffee beans selected with the greatest care.</p>
+      </div>
+
+      <div class="menu-filter">
+        <button class="filter-btn active" data-filter="hot">Hot Coffee</button>
+        <button class="filter-btn" data-filter="iced">Iced Coffee</button>
+        <button class="filter-btn" data-filter="nonCoffee">Non-Coffee</button>
+        <button class="filter-btn" data-filter="food">Food</button>
+      </div>
+
+      <div class="menu-category grid grid--3 active" id="hot">
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/coffee-2.avif" alt="Espresso">
+            <span class="card__badge card__badge--bestseller">Bestseller</span>
+          </div>
+          <div class="card__body">
+            <h3>Classic Espresso</h3>
+            <p>Bold and aromatic, authentic Italian-style espresso roasted from Arabica beans.</p>
+            <div class="card__price"><span class="price">฿ 90</span><span class="price-tag">Single Shot</span></div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/frappe.webp" alt="Latte">
+          </div>
+          <div class="card__body">
+            <h3>Creamy Latte</h3>
+            <p>Espresso blended with fresh milk — smooth and velvety on every sip.</p>
+            <div class="card__price"><span class="price">฿ 120</span><span class="price-tag">Hot</span></div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/coffee-1.avif" alt="Pour Over">
+            <span class="card__badge card__badge--chefs-pick">Chef's Pick</span>
+          </div>
+          <div class="card__body">
+            <h3>Pour Over Coffee</h3>
+            <p>Carefully hand-dripped to order, with delicate and refined fruity notes.</p>
+            <div class="card__price"><span class="price">฿ 150</span><span class="price-tag">Filter</span></div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/white-mocha.jpg" alt="Mocha">
+          </div>
+          <div class="card__body">
+            <h3>Chocolate Mocha</h3>
+            <p>A perfectly balanced blend of rich cocoa and bold espresso.</p>
+            <div class="card__price"><span class="price">฿ 140</span><span class="price-tag">Hot</span></div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/food-1.avif" alt="Caramel Macchiato">
+          </div>
+          <div class="card__body">
+            <h3>Caramel Macchiato</h3>
+            <p>Silky coffee and milk, layered with the sweet fragrance of caramel.</p>
+            <div class="card__price"><span class="price">฿ 130</span><span class="price-tag">Hot</span></div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/cappuccino.webp" alt="Cappuccino">
+          </div>
+          <div class="card__body">
+            <h3>Cappuccino</h3>
+            <p>Soft milk foam over bold espresso — a perfectly balanced classic.</p>
+            <div class="card__price"><span class="price">฿ 115</span><span class="price-tag">Hot</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category grid grid--3" id="iced">
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/iced-americano.webp" alt="Iced Americano">
+            <span class="card__badge card__badge--popular">Popular</span>
+          </div>
+          <div class="card__body">
+            <h3>Iced Americano</h3>
+            <p>Refreshingly bold black coffee over ice — cool, clean, and invigorating.</p>
+            <div class="card__price"><span class="price">฿ 100</span><span class="price-tag">Iced</span></div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/banana-coffee.jpg" alt="Iced Latte">
+          </div>
+          <div class="card__body">
+            <h3>Iced Latte</h3>
+            <p>Chilled espresso with fresh milk — a refreshing companion throughout the day.</p>
+            <div class="card__price"><span class="price">฿ 125</span><span class="price-tag">Iced</span></div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/caramel-latte.jpg" alt="Iced Caramel">
+          </div>
+          <div class="card__body">
+            <h3>Iced Caramel Latte</h3>
+            <p>Sweet caramel swirled into a smooth, ice-cold coffee latte.</p>
+            <div class="card__price"><span class="price">฿ 135</span><span class="price-tag">Iced</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category grid grid--3" id="nonCoffee">
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/coffee-3.avif" alt="Matcha Latte">
+            <span class="card__badge card__badge--new">New</span>
+          </div>
+          <div class="card__body">
+            <h3>Matcha Latte</h3>
+            <p>Ceremonial-grade matcha from Kyoto, blended with soft fresh milk for a well-balanced flavour.</p>
+            <div class="card__price"><span class="price">฿ 130</span><span class="price-tag">Hot / Iced</span></div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/coffee-4.avif" alt="Chocolate">
+          </div>
+          <div class="card__body">
+            <h3>Hot Chocolate</h3>
+            <p>Pure Belgian chocolate — rich, velvety, and wonderfully warming.</p>
+            <div class="card__price"><span class="price">฿ 120</span><span class="price-tag">Hot</span></div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/food-2.avif" alt="Fresh Juice">
+          </div>
+          <div class="card__body">
+            <h3>Fresh Juice</h3>
+            <p>Freshly squeezed juices available in a variety of seasonal flavours.</p>
+            <div class="card__price"><span class="price">฿ 110</span><span class="price-tag">Cold</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category grid grid--3" id="food">
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/bakery-1.avif" alt="Croissant">
+            <span class="card__badge">Fresh Daily</span>
+          </div>
+          <div class="card__body">
+            <h3>Butter Croissant</h3>
+            <p>Freshly baked every morning — golden and crisp on the outside, soft and buttery within.</p>
+            <div class="card__price"><span class="price">฿ 80</span><span class="price-tag">Bakery</span></div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/food-3.avif" alt="Cake">
+          </div>
+          <div class="card__body">
+            <h3>Tiramisu</h3>
+            <p>Classic Italian tiramisu — espresso-soaked ladyfingers layered with silky mascarpone cream.</p>
+            <div class="card__price"><span class="price">฿ 120</span><span class="price-tag">Signature</span></div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__image">
+            <img src="images/sandwich.webp" alt="Sandwich">
+          </div>
+          <div class="card__body">
+            <h3>Club Sandwich</h3>
+            <p>A generously filled sandwich — the perfect choice for a satisfying lunch.</p>
+            <div class="card__price"><span class="price">฿ 180</span><span class="price-tag">Lunch</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-logo">LUMINA</span>
+    <p class="footer-tagline">Freshly Brewed Happiness · Bangkok</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+    </div>
+    <p class="footer-copy">© 2026 Lumina Cafe Bangkok. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

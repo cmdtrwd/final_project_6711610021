@@ -1,0 +1,161 @@
+@mixin responsive-up($bp) {
+  @media (min-width: $bp) { @content; }
+}
+
+@mixin responsive-down($bp) {
+  @media (max-width: ($bp - 1)) { @content; }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin section-padding($v: $space-2xl, $h: $space-lg) {
+  padding: $v $h;
+  @include responsive-down($tablet) {
+    padding: ($v * 0.6) ($h * 0.75);
+  }
+}
+
+@mixin container($max: 1200px) {
+  max-width: $max;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $space-lg;
+  padding-right: $space-lg;
+  @include responsive-down($tablet) {
+    padding-left: $space-md;
+    padding-right: $space-md;
+  }
+}
+
+@mixin hero-overlay($opacity-top: 0.75, $opacity-bottom: 0.45) {
+  background: linear-gradient(
+    160deg,
+    rgba($primary, $opacity-top) 0%,
+    rgba($secondary, $opacity-bottom) 100%
+  );
+}
+
+@mixin gold-gradient {
+  background: linear-gradient(135deg, $accent 0%, $accent-light 50%, $accent-dark 100%);
+}
+
+@mixin heading-display($size: 3rem) {
+  font-family: $font-heading;
+  font-size: $size;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+@mixin button($bg: $accent, $color: $white) {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  background: $bg;
+  color: $color;
+  padding: 14px 36px;
+  border: 2px solid $bg;
+  border-radius: $radius-full;
+  text-decoration: none;
+  font-family: $font-body;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $transition-base;
+
+  &:hover {
+    background: transparent;
+    color: $bg;
+    transform: translateY(-2px);
+    box-shadow: $shadow-gold;
+  }
+  &:active { transform: translateY(0); }
+}
+
+@mixin button-outline($color: $white) {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  background: transparent;
+  color: $color;
+  padding: 12px 32px;
+  border: 1.5px solid rgba($color, 0.6);
+  border-radius: $radius-full;
+  text-decoration: none;
+  font-family: $font-body;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $transition-base;
+  backdrop-filter: blur(4px);
+
+  &:hover {
+    background: $color;
+    color: $primary;
+    border-color: $color;
+  }
+}
+
+@mixin card-hover {
+  transition: $transition-base;
+  will-change: transform;
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+@mixin gold-divider($width: 60px) {
+  content: '';
+  display: block;
+  width: $width;
+  height: 2px;
+  background: linear-gradient(90deg, $accent, $accent-light);
+  margin: $space-sm auto 0;
+  border-radius: $radius-full;
+}
+
+@mixin absolute-fill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin truncate($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@function rem($px, $base: 16) {
+  @return #{$px / $base}rem;
+}
+
+@function tint($color, $amount: 20%) {
+  @return mix(white, $color, $amount);
+}
+
+@function shade($color, $amount: 20%) {
+  @return mix(black, $color, $amount);
+}
+
+@function space($multiplier) {
+  @return $space-base * $multiplier;
+}
